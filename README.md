@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/655962123.svg)](https://doi.org/10.5281/zenodo.14286424)
+
 # Assessment of Aquifer Recharge Estimation Using Empirical Methodologies
 
 This project implements methodologies to estimate the potential aquifer recharge in the Lebrija river basin, Santander, Colombia. The code is derived from the research presented in the thesis:
