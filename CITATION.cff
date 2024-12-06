@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software in your work, please cite it as below."
+title: "Assessment of Aquifer Recharge Estimation Using Empirical Methodologies"
+authors:
+  - family-names: "Gómez Medina"
+    given-names: "David Camilo"
+    orcid: "https://orcid.org/0009-0001-8535-4400"
+  - family-names: "Piña Fulano"
+    given-names: "Adriana Patricia"
+    orcid: "https://orcid.org/0000-0003-2252-2160" # Replace with actual ORCID if available
+  - family-names: "Donado Garzón"
+    given-names: "Leonardo David"
+    orcid: "https://orcid.org/0000-0002-5479-3419" # Replace with actual ORCID if available
+date-released: 2024-12-05
+version: "1.0.0"
+doi: "10.5281/zenodo.14286425" # Replace with a valid DOI if available
+url: "https://doi.org/10.5281/zenodo.14286425"
+repository-code: "https://github.com/dcgomezme/aquifer_recharge"
+abstract: >
+  This project implements methodologies to estimate the potential aquifer recharge in the Lebrija river basin, 
+  Santander, Colombia. It is based on the thesis "Assessment of methodologies to estimate aquifer recharge 
+  in a Tropical Climate Zone," which evaluates empirical methodologies for aquifer recharge estimation using 
+  hydrological, geological, and climatic data in a tropical climate context.
+keywords:
+  - Aquifer recharge
+  - Empirical methodologies
+  - Hydrology
+  - R programming
+  - Tropical climate
+license: MIT
