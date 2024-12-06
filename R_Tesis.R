@@ -41,7 +41,7 @@ library(rnaturalearth)
 library(rnaturalearthdata)
 
 #Defining the working directory
-setwd("C:/Users/David Gomez/Desktop/TESIS/DATOS")
+setwd("C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS")
 
 #Function to be able to discard stations without data - precipitation
 agg <- function(x) {
@@ -339,7 +339,7 @@ grd <- cbind(grd, values(dem, na.rm = T) * 0.0065)
 
 #-----PRECIPITATION INTERPOLATION-----
 #Path where the results are to be saved
-path_ppt <- 'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/PPT/'
+path_ppt <- 'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/PPT/'
 
 #Assigned name for precipitation interpolation results
 name_ppt <- "PPT"
@@ -417,7 +417,7 @@ for (i in years) {
 #-----PRECIPITATION INTERPOLATION PER MONTH OF EACH YEAR-----
 
 #Path where the results are to be saved
-path_ym_ppt <- 'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/S_PPT/'
+path_ym_ppt <- 'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/S_PPT/'
 
 for (j in year_month) {
   #The as.vector function is used to extract the data and it is nested with
@@ -470,7 +470,7 @@ for (j in year_month) {
 }
 #-----MEAN TEMPERATURE INTERPOLATION-----
 #Path where the results are to be saved
-path_mt <- 'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/MTEMP/'
+path_mt <- 'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/MTEMP/'
 
 #Assigned name for mean temperature interpolation results
 name_mt <- "MT"
@@ -530,7 +530,7 @@ for (i in years) {
 #-----MEAN TEMPERATURE INTERPOLATION PER MONTH OF EACH YEAR-----
 
 #Path where the results are to be saved
-path_ym_mt <- 'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/S_MTEMP/'
+path_ym_mt <- 'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/S_MTEMP/'
 
 #A for loop is used to perform mean temperature interpolation
 for (j in year_month) {
@@ -583,8 +583,10 @@ for (j in year_month) {
               overwrite = T)
 }
 
+#-----MAXIMUM TEMPERATURE INTERPOLATION-----
+
 #Path where the results are to be saved
-path_maxt <- 'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/S_MAXT/'
+path_maxt <- 'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/S_MAXT/'
 
 #Assigned name for maximum temperature interpolation results
 name_maxt <- "MAXT"
@@ -640,8 +642,10 @@ for (j in year_month) {
               overwrite = T)
 }
 
+#----MINIMUM TEMPERTURE----
+
 #Path where the results are to be saved
-path_mint <- 'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/S_MINT/'
+path_mint <- 'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/S_MINT/'
 
 #Assigned name for minimum temperature interpolation results
 name_mint <- "MINT"
@@ -734,7 +738,7 @@ lat$z <- df_lat_mt$y
 lat <- rast(lat, type = "xyz", crs = "epsg:9377")
 
 #Path where the results are to be saved
-path_lat <- 'C:/Users/David Gomez/Desktop/TESIS/DATOS/Raster/'
+path_lat <- 'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/Raster/'
 
 #Export latitude result as raster file
 writeRaster(lat, paste0(path_lat, "lat.tif"), overwrite = T)
@@ -752,7 +756,7 @@ tmn_s <- list()
 etpm <- list()
 
 #Path where the results are to be saved
-path_etpm <- 'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/ETPm/'
+path_etpm <- 'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/ETPm/'
 
 #Assigned name for monthly evapotranspiration results
 name_etpm <- 'ETP'
@@ -837,9 +841,9 @@ temp_m <- list() #Mean temperature
 l_temp <- list() #Parameter L
 ppt_in <- list() #Precipitation in inches
 
-path_rec <- c('C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/REC_A/REC_1/',
-              'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/REC_A/REC_2/',
-              'C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/REC_A/REC_3/')
+path_rec <- c('C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/REC_A/REC_1/',
+              'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/REC_A/REC_2/',
+              'C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/REC_A/REC_3/')
 
 name_rec <- c("REC_1", "REC_2", "REC_3")
 
@@ -970,15 +974,15 @@ r_per_3 <- 100 - mean(values( ( (ppt_t - (rec_t_3)) / ppt_t) * 100),
 #r_df <- as.data.frame(rec_t, xy=TRUE)
 
 writeRaster(rec_t, filename = 
-              "C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/REC/REC_T_1",
+              "C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/REC/REC_T_1",
             format = "GTiff", overwrite = TRUE)
 
 writeRaster(rec_t_2, filename = 
-              "C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/REC/REC_T_2",
+              "C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/REC/REC_T_2",
             format = "GTiff", overwrite = TRUE)
 
 writeRaster(rec_t_3, filename = 
-              "C:/Users/David Gomez/Desktop/TESIS/DATOS/RESULTS/REC/REC_T_3",
+              "C:/Users/gomed/OneDrive/Escritorio/TESIS/DATOS/RESULTS/REC/REC_T_3",
             format = "GTiff", overwrite = TRUE)
 
 writeRaster(rec_3[["2020"]], filename = 
@@ -1675,6 +1679,51 @@ for (j in 1:length(year_month)) {
     }
   }
 }
+
+#--
+# Paso 1: ya completado previamente con la creación del vector year_month.
+
+# Función para listar archivos raster
+list_raster_files <- function(directory, pattern) {
+  list.files(directory, pattern = pattern, full.names = TRUE)
+}
+
+# Función para procesar y combinar rasters
+process_and_combine_rasters <- function(raster_files1, raster_files2, CC_r) {
+  pim_raster <- stack(raster_files1)
+  etpm_raster <- stack(raster_files2)
+  
+  # Aplicar overlay y retornar el resultado
+  overlay(pim_raster, etpm_raster, fun = function(x, y) ifelse(x > y, values(CC_r), 0))
+}
+
+# Inicializar variables necesarias
+ym_99 <- "1999-12"
+pat_99 <- glob2rx(paste0(ym_99, "*.tif$"))
+
+# Asumiendo que CC_r está definido previamente
+
+# Bucle principal
+hsi <- list()  # Asegúrate de inicializar esta lista si no se ha hecho previamente
+
+for (ym in year_month) {
+  pim_files <- list_raster_files("DATA_99/RESULTS/RAS_SCH/PI", pat_99)
+  etpm_files <- list_raster_files("DATA_99/RESULTS/ETPm", pat_99)
+  
+  # Procesar y combinar rasters
+  hsi_raster <- process_and_combine_rasters(pim_files, etpm_files, CC_r)
+  
+  # Almacenar y escribir el raster
+  hsi[[ym]] <- hsi_raster
+  writeRaster(hsi[[ym]], paste0("RESULTS/RAS_SCH/HSi/", ym, "-HSi.tif"), overwrite = TRUE)
+  
+  # Mensajes de carga, si son necesarios
+  # Estos fueron removidos para simplificar, pero puedes agregar un mensaje de progreso aquí si lo deseas
+}
+
+# Nota: Este código asume que tienes las funciones 'raster', 'stack', 'overlay', y 'writeRaster' disponibles y cargadas en tu entorno R.
+
+#--
 
 #-----HD-----
 # Load the wilting point raster file and project it
